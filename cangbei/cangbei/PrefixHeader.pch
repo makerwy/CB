@@ -15,4 +15,6 @@
 #import <Core/BaseModule.h>
 #import <Core/ModuleCenter.h>
 
+#import "LoginModuleInterface.h"
+
 #endif /* PrefixHeader_pch */

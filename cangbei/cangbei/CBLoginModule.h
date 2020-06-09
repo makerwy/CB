@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CBLoginModule : BaseModule
+@interface CBLoginModule : BaseModule<LoginModuleProtocol>
 
 @end
 

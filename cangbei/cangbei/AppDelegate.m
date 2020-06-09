@@ -15,6 +15,16 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    id<LoginModuleProtocol> module = [[ModuleCenter defaultCenter] getModule:@"CBLogin"];
+    if (module) {
+        [module openLoginVC:@{} completeHandler:^{
+            //
+        }];
+    }
     
     return YES;
 }
